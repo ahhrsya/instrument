@@ -116,11 +116,21 @@
   right: -5%;
   top: 50%;
   transform: translateY(-50%);
-  width: 50%;
-  height: 80%;
+  width: 55%;
+  height: 90%;
   z-index: 1;
-  opacity: 0.15;
+  opacity: 0.9;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: auto;
+  mask-image: radial-gradient(circle, black 50%, transparent 85%);
+  -webkit-mask-image: radial-gradient(circle, black 50%, transparent 85%);
 }
 
 .hero-kinetic-shape {
@@ -254,6 +264,54 @@
   font-family: var(--font-family-hubot);
   font-weight: 700;
   font-size: 24px;
+}
+
+.case-study-visual {
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.case-study-visual img {
+  width: 100%;
+  height: auto;
+  transition: transform var(--transition-medium);
+}
+
+.card:hover .case-study-visual img {
+  transform: scale(1.05);
+}
+
+/* =========================================
+   GALLERY SECTION
+   ========================================= */
+
+.gallery-section {
+  padding: var(--spacing-section-y) 0;
+  background-color: var(--color-white);
+}
+
+.gallery-main-image {
+  width: 100%;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow-hover);
+  margin-top: 40px;
+}
+
+.section-eyebrow {
+  font-family: var(--font-family-dm-mono);
+  font-size: var(--font-size-label);
+  color: var(--color-outrageous-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.bg-espresso .section-eyebrow {
+  color: var(--color-lilac);
 }
 
 /* =========================================
