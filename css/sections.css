@@ -1,0 +1,423 @@
+/* css/sections.css */
+
+/* =========================================
+   HEADER / NAVIGATION
+   ========================================= */
+
+.site-header {
+  background-color: var(--color-paper);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-family-hubot);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-outrageous-orange);
+  letter-spacing: -0.02em;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-family: var(--font-family-dm-sans);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-ink);
+}
+
+.nav-link:hover {
+  color: var(--color-outrageous-orange);
+}
+
+/* Base utility classes for section backgrounds */
+.bg-orange {
+  background-color: var(--color-outrageous-orange);
+  color: var(--color-paper);
+}
+
+.bg-orange h1, .bg-orange h2, .bg-orange h3, .bg-orange .stat-label {
+  color: var(--color-paper);
+}
+
+.bg-espresso {
+  background-color: var(--color-espresso);
+  color: var(--color-paper);
+}
+
+.bg-espresso h1, .bg-espresso h2, .bg-espresso h3, .bg-espresso .stat-label {
+  color: var(--color-white);
+}
+
+.bg-paper {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero-section {
+  padding: var(--spacing-hero-y) 0;
+  min-height: calc(100vh - 80px); /* 80px approx header height */
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 800px;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-subheadline {
+  font-size: var(--font-size-body-large);
+  margin-bottom: 40px;
+  max-width: 600px;
+  opacity: 0.95;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Secondary CTA specific to Hero (White Border on Orange bg) */
+.hero-section .btn-secondary {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.hero-section .btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-outrageous-orange);
+}
+
+.hero-visual {
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 80%;
+  z-index: 1;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.hero-kinetic-shape {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, var(--color-white) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+/* =========================================
+   PROBLEM & AGITATE SECTIONS
+   ========================================= */
+
+.problem-section, .agitate-section, .why-now-section {
+  padding: var(--spacing-section-y) 0;
+}
+
+.section-header-narrow {
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.problem-copy p {
+  font-size: var(--font-size-body-large);
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.agitate-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+}
+
+/* =========================================
+   SOLUTION SECTION
+   ========================================= */
+
+.solution-section {
+  text-align: center;
+}
+
+.solution-header {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.solution-diagram {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: var(--box-shadow-default);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.diagram-step {
+  text-align: center;
+  flex: 1;
+}
+
+.diagram-icon {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(255, 107, 53, 0.1);
+  color: var(--color-outrageous-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-family: var(--font-family-hubot);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.diagram-arrow {
+  color: var(--color-gray-border);
+  font-size: 24px;
+}
+
+/* =========================================
+   VALUE PROPOSITIONS
+   ========================================= */
+
+.value-props-section {
+  background-color: var(--color-gray-light);
+}
+
+.value-prop-icon {
+  color: var(--color-outrageous-orange);
+  margin-bottom: 16px;
+  width: 32px;
+  height: 32px;
+}
+
+/* =========================================
+   CASE STUDIES
+   ========================================= */
+
+.logo-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--color-gray-border);
+  flex-wrap: wrap;
+  gap: 32px;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transition: all var(--transition-medium);
+}
+
+.logo-bar:hover {
+  opacity: 0.8;
+}
+
+.brand-logo {
+  font-family: var(--font-family-hubot);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+/* =========================================
+   WHY NOW
+   ========================================= */
+
+.why-now-copy p {
+  font-size: var(--font-size-body-large);
+  margin-bottom: 24px;
+}
+
+.why-now-stat {
+  font-size: 80px;
+  color: var(--color-outrageous-orange);
+  font-family: var(--font-family-hubot);
+  line-height: 1;
+  margin: 20px 0;
+}
+
+/* =========================================
+   FAQ
+   ========================================= */
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   FINAL CTA
+   ========================================= */
+
+.final-cta-section {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.final-cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.final-cta-content p {
+  font-size: var(--font-size-body-large);
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+  background-color: #1A1010; /* Darker than espresso */
+  color: var(--color-paper);
+  padding: 60px 0 40px;
+  font-size: var(--font-size-body-small);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  font-family: var(--font-family-hubot);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-outrageous-orange);
+  margin-bottom: 16px;
+}
+
+.footer-text {
+  opacity: 0.7;
+  max-width: 300px;
+}
+
+.footer-heading {
+  font-family: var(--font-family-hubot);
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: var(--color-white);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: rgba(245, 245, 240, 0.7); /* Translucent paper */
+}
+
+.footer-links a:hover {
+  color: var(--color-outrageous-orange);
+}
+
+.footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.5;
+}
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 1023px) {
+  .problem-grid, .agitate-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-nav {
+    display: none; /* simple hidden nav for mobile prototype */
+  }
+  
+  .hero-section {
+    min-height: auto;
+    padding-top: 100px;
+  }
+  
+  .hero-visual {
+    display: none;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+  }
+  
+  .solution-diagram {
+    flex-direction: column;
+  }
+  
+  .diagram-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,102 @@
+/* css/variables.css */
+:root {
+  /* Color Palette */
+  --color-outrageous-orange: #FF6B35;
+  --color-outrageous-orange-dark: #E65A2E;
+  --color-outrageous-orange-active: #D94A1E;
+  --color-espresso: #2D1B1B;
+  --color-lilac: #B4A7E8;
+  --color-lilac-dark: #9D7FD9;
+  --color-paper: #F5F5F0;
+  --color-ink: #1A1A1A;
+  --color-white: #FFFFFF;
+  --color-gray-light: #EEEEEE;
+  --color-gray-border: #DDDDDD;
+
+  /* Typography - Font Families */
+  --font-family-hubot: 'Hubot Sans', sans-serif; /* Note: Requires @font-face definition for exact match */
+  --font-family-dm-sans: 'DM Sans', sans-serif;
+  --font-family-dm-mono: 'DM Mono', monospace;
+
+  /* Typography Size Scale - Desktop/Default */
+  --font-size-hero-h1: 48px;
+  --font-size-section-h2: 32px;
+  --font-size-subsection-h3: 24px;
+  --font-size-case-study-metric: 32px;
+  --font-size-stat-large: 48px;
+  
+  --font-size-body-large: 18px;
+  --font-size-body-default: 16px;
+  --font-size-body-small: 14px;
+  --font-size-label: 12px;
+
+  /* Spacing */
+  --container-max-width: 1400px;
+  --container-padding: 40px; /* Sides */
+  
+  --spacing-section-y: 60px;
+  --spacing-hero-y: 80px;
+  
+  --spacing-component-gap: 20px;
+  --spacing-paragraph-gap: 16px;
+  --spacing-card-padding: 24px;
+  --spacing-card-gap: 24px;
+  
+  /* Container Grid */
+  --grid-columns: 12;
+  --grid-gutter: 20px;
+
+  /* UI Elements */
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 8px;
+  
+  --box-shadow-default: 0 4px 12px rgba(0,0,0,0.08);
+  --box-shadow-hover: 0 8px 24px rgba(0,0,0,0.15);
+  
+  /* Animations */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.6s ease-in-out;
+}
+
+/* Tablet Breakpoint Adjustments (768px - 1023px) */
+@media (max-width: 1023px) {
+  :root {
+    --font-size-hero-h1: 40px;
+    --font-size-section-h2: 28px;
+    --font-size-subsection-h3: 20px;
+    
+    --font-size-body-large: 16px;
+    --font-size-body-default: 15px;
+    
+    --container-padding: 30px;
+    --spacing-section-y: 50px;
+    --spacing-hero-y: 70px;
+    
+    --grid-gutter: 12px;
+  }
+}
+
+/* Mobile Breakpoint Adjustments (max-width: 767px) */
+@media (max-width: 767px) {
+  :root {
+    --font-size-hero-h1: 32px;
+    --font-size-section-h2: 24px;
+    --font-size-subsection-h3: 18px;
+    --font-size-stat-large: 36px;
+    
+    --font-size-body-large: 16px;
+    --font-size-body-default: 14px;
+    --font-size-body-small: 13px;
+    --font-size-label: 11px;
+    
+    --container-padding: 20px;
+    --spacing-section-y: 40px;
+    --spacing-hero-y: 60px;
+    --spacing-card-padding: 20px;
+    --spacing-card-gap: 16px;
+    
+    --grid-gutter: 16px; /* Back to 16px for mobile stacked view if needed */
+  }
+}
