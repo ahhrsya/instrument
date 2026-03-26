@@ -73,72 +73,150 @@
    ========================================= */
 
 .hero-section {
-  padding: var(--spacing-hero-y) 0;
-  min-height: calc(100vh - 80px); /* 80px approx header height */
+  padding: 100px 0 0; /* No bottom padding, mosaic takes space */
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   position: relative;
   overflow: hidden;
+  background-color: #000; /* Pure black like screenshot */
+  text-align: center;
 }
 
 .hero-content {
-  max-width: 800px;
-  z-index: 2;
+  max-width: 900px;
+  z-index: 10;
   position: relative;
+  margin-top: 40px;
+}
+
+.hero-section h1 {
+  font-size: 80px;
+  line-height: 1.1;
+  margin: 20px 0;
+  color: var(--color-white);
 }
 
 .hero-subheadline {
   font-size: var(--font-size-body-large);
   margin-bottom: 40px;
+  max-width: 700px;
+  color: rgba(255,255,255,0.7);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Prompt Pill */
+.prompt-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255,255,255,0.1);
+  padding: 8px 16px;
+  border-radius: 100px;
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* Floating Prompt Card */
+.prompt-card {
+  background-color: #1A1A1A;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 24px;
+  width: 100%;
   max-width: 600px;
-  opacity: 0.95;
+  margin: 0 auto 60px;
+  text-align: left;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  z-index: 15;
 }
 
-.hero-actions {
+.prompt-card textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: 18px;
+  resize: none;
+  height: 80px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.prompt-card-footer {
   display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Secondary CTA specific to Hero (White Border on Orange bg) */
-.hero-section .btn-secondary {
-  border-color: var(--color-white);
-  color: var(--color-white);
-}
-
-.hero-section .btn-secondary:hover {
-  background-color: var(--color-white);
-  color: var(--color-outrageous-orange);
-}
-
-.hero-visual {
-  position: absolute;
-  right: -5%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 55%;
-  height: 90%;
-  z-index: 1;
-  opacity: 0.9;
-  pointer-events: none;
+.btn-prompt-action {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 14px;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 6px;
 }
 
-.hero-visual img {
+.btn-generate {
+  background-color: #007AFF;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Image Mosaic Grid */
+.hero-mosaic {
+  position: relative;
   width: 100%;
-  height: auto;
-  mask-image: radial-gradient(circle, black 50%, transparent 85%);
-  -webkit-mask-image: radial-gradient(circle, black 50%, transparent 85%);
+  margin-top: -100px; /* Pull up to overlap with prompt */
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 16px;
+  padding: 0 40px;
 }
 
-.hero-kinetic-shape {
+.mosaic-img {
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, var(--color-white) 0%, transparent 70%);
-  border-radius: 50%;
-  filter: blur(40px);
+  object-fit: cover;
+  border-radius: 24px;
+  transition: transform 0.4s ease;
+}
+
+.mosaic-img:hover {
+  transform: scale(1.02);
+}
+
+.m-1 { grid-column: 1 / 3; grid-row: 3 / 6; transform: translateY(20px); }
+.m-2 { grid-column: 2 / 5; grid-row: 4 / 7; transform: translateX(-20px); }
+.m-3 { grid-column: 5 / 8; grid-row: 4 / 7; } /* Center focus - Betta fish */
+.m-4 { grid-column: 8 / 11; grid-row: 4 / 7; transform: translateX(20px); }
+.m-5 { grid-column: 11 / 13; grid-row: 3 / 6; transform: translateY(20px); }
+.m-6 { grid-column: 1 / 3; grid-row: 1 / 3; opacity: 0.3; }
+.m-7 { grid-column: 10 / 12; grid-row: 1 / 3; opacity: 0.3; }
+
+/* Navbar link hover */
+.nav-link:hover {
+  color: white !important;
 }
 
 /* =========================================
