@@ -91,41 +91,51 @@
 
 .hero-grid-images {
   width: 100%;
-  max-width: 1400px;
-  margin: 60px auto 0;
-  padding: 0 40px;
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 0 20px;
 }
 
-.hero-mosaic {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 16px;
-  align-items: end;
-  height: 500px;
+.hero-mosaic-new {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
 }
 
-.mosaic-item {
-  border-radius: 16px;
+.mosaic-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mosaic-card {
+  width: 100%;
+  border-radius: 12px;
   overflow: hidden;
-  background-color: var(--color-gray-light);
-  transition: transform 0.3s ease;
+  background-color: #ededed;
 }
 
-.mosaic-item:hover {
-  transform: translateY(-10px);
-}
-
-.mosaic-item img {
+.mosaic-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Staggering the mosaic as per wireframe */
-.mosaic-item:nth-child(1), .mosaic-item:nth-child(7) { height: 280px; opacity: 0.4; }
-.mosaic-item:nth-child(2), .mosaic-item:nth-child(6) { height: 340px; opacity: 0.7; }
-.mosaic-item:nth-child(3), .mosaic-item:nth-child(5) { height: 400px; }
-.mosaic-item:nth-child(4) { height: 480px; z-index: 10; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+/* Specific heights based on screenshot */
+.col-1 .card-top { height: 120px; }
+.col-1 .card-bottom { height: 380px; }
+
+.col-2 .card-top { height: 260px; }
+.col-2 .card-bottom { height: 240px; }
+
+.col-3 .card-center { height: 524px; }
+
+.col-4 .card-top { height: 350px; }
+.col-4 .card-bottom { height: 154px; }
+
+.col-5 .card-top { height: 140px; }
+.col-5 .card-bottom { height: 364px; }
 
 .image-box {
   border-radius: 20px;

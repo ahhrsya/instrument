@@ -19,21 +19,19 @@
     <link rel="stylesheet" href="css/sections.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container" style="max-width: 1400px;">
+    <header class="site-header" style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
             <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                Instant Studio
+                <img src="images/logo.png" alt="Instant Studio" style="height: 32px; filter: contrast(1.2);">
             </div>
-            <nav class="main-nav">
-                <a href="#platform" class="nav-link">Platform</a>
-                <a href="#solution" class="nav-link">How It Works</a>
-                <a href="#case-studies" class="nav-link">Work</a>
+            <nav class="main-nav" style="display: flex; gap: 32px; font-weight: 500; font-size: 14px;">
+                <a href="#" style="color: var(--color-outrageous-orange);">Home</a>
+                <a href="#platform" style="color: rgba(0,0,0,0.6);">Nav-Link</a>
+                <a href="#solution" style="color: rgba(0,0,0,0.6);">Nav-Link</a>
+                <a href="#case-studies" style="color: rgba(0,0,0,0.6);">Nav-Link</a>
+                <a href="#contact" style="color: rgba(0,0,0,0.6);">Nav-Link</a>
             </nav>
-            <div style="display: flex; gap: 12px;">
-                <button class="btn btn-primary" style="background-color: var(--color-ink); color: var(--color-white); border-radius: 100px;">Sign up</button>
-                <a href="#contact" class="btn btn-secondary" style="border-radius: 100px;">Talk to us</a>
-            </div>
+            <button class="btn btn-secondary" style="border-color: var(--color-lilac); color: var(--color-lilac); border-radius: 100px; padding: 10px 24px; font-size: 14px; background: transparent;">Book a demo</button>
         </div>
     </header>
 
@@ -41,23 +39,36 @@
         <section class="hero-section bg-paper">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="headline-hubot">1,000 On-Brand Ads.<br>Minutes, Not Months.</h1>
-                    <p class="hero-subheadline" style="color: var(--color-ink); opacity: 0.7;">Instant Studio deploys managed AI workflows—Creative Sequences—that automate ad production, animation, localisation, and variant generation across your APAC markets.</p>
-                    <div class="flex-center" style="gap: 16px; margin-top: 32px;">
-                        <button class="btn btn-primary" style="background-color: var(--color-lilac); color: var(--color-ink);">Book a Demo</button>
-                        <button class="btn btn-secondary" style="border-color: var(--color-gray-border); color: var(--color-ink);">Case Studies</button>
+                    <h1 class="headline-hubot" style="font-size: 80px; margin-bottom: 24px;">1,000 On-Brand Ads.<br>Minutes, Not Months.</h1>
+                    <p class="hero-subheadline" style="color: rgba(0,0,0,0.6); max-width: 800px; margin: 0 auto 40px;">Instant Studio deploys managed AI workflows – Creative Sequences – that automate ad production, animation, localisation, and variant generation across your APAC markets. 10–50x the output at a third of the cost, with your brand guardrails built in.</p>
+                    
+                    <div class="hero-actions" style="display: flex; gap: 16px; justify-content: center;">
+                        <button class="btn btn-primary" style="background-color: var(--color-lilac); color: var(--color-ink); border: none; border-radius: 10px; padding: 14px 28px; font-weight: 700;">Talk to Our Team</button>
+                        <button class="btn btn-secondary" style="border-color: var(--color-lilac); color: var(--color-lilac); background: transparent; border-radius: 10px; padding: 14px 28px;">See Our Work</button>
                     </div>
                 </div>
                 
-                <div class="hero-grid-images">
-                    <div class="hero-mosaic">
-                        <div class="mosaic-item"><img src="images/m_betta.png" alt="AI AI Beta"></div>
-                        <div class="mosaic-item"><img src="images/m_flower.png" alt="AI Flower"></div>
-                        <div class="mosaic-item"><img src="images/m_raccoon.png" alt="AI Raccoon"></div>
-                        <div class="mosaic-item"><img src="images/hero_visual.png" alt="AI Focal"></div>
-                        <div class="mosaic-item"><img src="images/m_car.png" alt="AI Classic Car"></div>
-                        <div class="mosaic-item"><img src="images/m_galaxy.png" alt="AI Galaxy"></div>
-                        <div class="mosaic-item"><img src="images/m_sushi.png" alt="AI Sushi"></div>
+                <div class="hero-grid-images" style="padding: 0;">
+                    <div class="hero-mosaic-new">
+                        <div class="mosaic-col col-1">
+                            <div class="mosaic-card card-top" style="background-color: #f0f0f0;"></div>
+                            <div class="mosaic-card card-bottom"><img src="images/m_betta.png" alt="Card" style="width:100%; height:100%; object-fit:cover;"></div>
+                        </div>
+                        <div class="mosaic-col col-2">
+                            <div class="mosaic-card card-top"><img src="images/m_flower.png" alt="Card" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="mosaic-card card-bottom" style="background-color: #e8e8e8;"></div>
+                        </div>
+                        <div class="mosaic-col col-3">
+                            <div class="mosaic-card card-center"><img src="images/hero_visual.png" alt="Card" style="width:100%; height:100%; object-fit:cover;"></div>
+                        </div>
+                        <div class="mosaic-col col-4">
+                            <div class="mosaic-card card-top"><img src="images/m_car.png" alt="Card" style="width:100%; height:100%; object-fit:cover;"></div>
+                            <div class="mosaic-card card-bottom" style="background-color: #f5f5f5;"></div>
+                        </div>
+                        <div class="mosaic-col col-5">
+                            <div class="mosaic-card card-top" style="background-color: #f0f0f0;"></div>
+                            <div class="mosaic-card card-bottom"><img src="images/m_galaxy.png" alt="Card" style="width:100%; height:100%; object-fit:cover;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
