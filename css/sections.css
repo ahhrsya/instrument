@@ -91,26 +91,52 @@
 
 .hero-grid-images {
   width: 100%;
-  overflow: hidden;
-  padding: 40px 0;
+  max-width: 1400px;
+  margin: 60px auto 0;
+  padding: 0 40px;
 }
 
-.grid-images-row {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+.hero-mosaic {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 16px;
+  align-items: end;
+  height: 500px;
 }
 
-.image-box {
-  flex: 1;
-  min-width: 200px;
-  border-radius: 12px;
+.mosaic-item {
+  border-radius: 16px;
   overflow: hidden;
+  background-color: var(--color-gray-light);
   transition: transform 0.3s ease;
 }
 
-.image-box:hover {
+.mosaic-item:hover {
   transform: translateY(-10px);
+}
+
+.mosaic-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Staggering the mosaic as per wireframe */
+.mosaic-item:nth-child(1), .mosaic-item:nth-child(7) { height: 280px; opacity: 0.4; }
+.mosaic-item:nth-child(2), .mosaic-item:nth-child(6) { height: 340px; opacity: 0.7; }
+.mosaic-item:nth-child(3), .mosaic-item:nth-child(5) { height: 400px; }
+.mosaic-item:nth-child(4) { height: 480px; z-index: 10; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+
+.image-box {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--color-gray-light);
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Staggered Images */
@@ -131,10 +157,15 @@
 }
 
 /* Layout Utilities */
-.grid-3 {
+.grid-3-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.grid-3-images .image-box {
+  height: 350px;
 }
 
 .flex-center {
