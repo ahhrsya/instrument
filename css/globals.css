@@ -135,8 +135,29 @@ section {
 
 /* Background Utilities */
 .bg-paper { background-color: var(--color-paper); color: var(--color-ink); }
-.bg-espresso { background-color: var(--color-espresso); color: var(--color-white); }
-.bg-orange { background-color: var(--color-outrageous-orange); color: var(--color-white); }
+
+.bg-espresso { 
+  background-color: var(--color-espresso); 
+  color: var(--color-paper); 
+}
+.bg-espresso h1, .bg-espresso h2, .bg-espresso h3, .bg-espresso .headline-hubot { 
+  color: var(--color-paper); 
+}
+.bg-espresso p {
+  color: rgba(249, 249, 248, 0.7); /* Slightly transparent paper for body */
+}
+.bg-espresso .section-eyebrow {
+  color: var(--color-lilac);
+}
+
+.bg-orange { 
+  background-color: var(--color-outrageous-orange); 
+  color: var(--color-ink); 
+}
+.bg-orange h1, .bg-orange h2, .bg-orange h3, .bg-orange .headline-hubot { 
+  color: var(--color-ink); 
+}
+
 .bg-lilac { background-color: var(--color-lilac); color: var(--color-ink); }
 .bg-white { background-color: var(--color-white); color: var(--color-ink); }
 
