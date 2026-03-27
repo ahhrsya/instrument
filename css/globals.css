@@ -129,6 +129,33 @@ img, picture, video, canvas, svg {
 
 /* Section Shared Defaults */
 section {
-  padding: var(--spacing-section-y) 0;
+  padding: 120px 0;
   position: relative;
+}
+
+/* Background Utilities */
+.bg-paper { background-color: var(--color-paper); color: var(--color-ink); }
+.bg-espresso { background-color: var(--color-espresso); color: var(--color-white); }
+.bg-orange { background-color: var(--color-outrageous-orange); color: var(--color-white); }
+.bg-lilac { background-color: var(--color-lilac); color: var(--color-ink); }
+.bg-white { background-color: var(--color-white); color: var(--color-ink); }
+
+/* Layout Grid Helpers */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+@media (max-width: 991px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
